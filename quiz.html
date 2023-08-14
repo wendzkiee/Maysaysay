@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset = "UTF-8">
+        <title>Maysaysay</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Galdeano&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "css/style.css" type = "text/css" />
+    </head>
+
+    <meta name = "viewport" content = "width=device-width">
+
+    <body>
+        
+        <header>
+            <div class = "header-top">
+                <a href = "index.html">
+                    <img class = "header-logo" src = "images/general/logo-placeholder.svg">
+                    <div class = "header-brandname">MAYSAYSAY</div>
+                </a>
+            </div>
+            <div class = "header-middle">
+
+            </div>
+            <div class = "header-bottom">
+                <ul>
+                    <li><div class = "dropdown-parent"><a href = "index.html">HOME</a></div>
+                        <div class = "dropdown-child">
+                            <a href = "#">QUIZ</a>
+                        </div>
+                    </li>
+
+                    <li><div class = "dropdown-parent"><a href = "gallery.html">GALLERY</a></div>
+                        <div class = "dropdown-child">
+                            <a href = "#">FEATURES</a>
+                            <a href = "#">MAKE YOUR OWN PROFILE</a>
+                            <a href = "#">STUDENT PROFILES</a>
+                        </div>
+                    </li>
+
+                    <li><div class = "dropdown-parent"><a href = "materials.html">MATERIALS</a></div>
+                        <div class = "dropdown-child">
+                            <a href = "#">WORKSHEETS</a>
+                            <a href = "#">GIF STICKERS</a>
+                            <a href = "#">SLIDESHOW TEMPLATES</a>
+                        </div>
+                    </li>
+
+                    <li><div class = "dropdown-parent"><a href = "submit.html">SUBMIT A FEATURE</a></div>
+                        <div class = "dropdown-child">
+                            <a href = "#">SUBMISSION FORM</a>
+                        </div>
+                    </li>
+
+                    <li><div class = "dropdown-parent"><a href = "about.html">ABOUT</a></div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            
+            <form action="/action_page.php">
+                <!-- <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+
+
+                <input type="radio" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike</label><br>
+                <input type="radio" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="radio" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> I have a boat</label> -->
+
+                <!-- // A B C
+                // A B C
+                // A B C
+                // A B C
+                // A B C
+                // A B C
+
+                TO DO: compute percentage of A, B, C for the total QUIZ
+
+
+                if () -->
+                <p>What's your favorite color?</p>
+
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Red</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">Green</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">Blue</label>
+
+                <p>Where did you grow up?</p>
+
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Paranaque</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">Manila</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">Muntinlupa</label>
+
+                <button type="button" onclick="myFunction()">Submit</button>
+
+                <p id="demo" style="font-size: large;"></p>
+                <p id="demo1" style="font-size: large;"></p>
+            </form>
+
+        </main>
+
+        <footer>
+            <div class = "footer-top">
+                © 2023 Maysaysay. All rights reserved.
+            </div>
+            <ul class = "footer-middle">
+                <li>
+                    <a href = "https://www.facebook.com/maysaysay">
+                        <img class = "socmed-icons" src = "images/general/facebook-placeholder.png">
+                    </a>
+                </li>
+                <li>
+                    <a href = "https://www.instagram.com/maysaysay">
+                        <img class = "socmed-icons" src = "images/general/instagram-placeholder.png">
+                    </a>
+                </li>
+                <li>
+                    <a href = "https://www.tiktok.com/@maysaysay">
+                        <img class = "socmed-icons" src = "images/general/tiktok-placeholder.png">
+                    </a>
+                </li>
+            </ul>
+            <div class = "footer-bottom">
+                <div class = "footer-bottom-left">
+                    <a href = "contactus.html">
+                        CONTACT US
+                    </a>
+                </div>
+                <div class = "footer-bottom-right">
+                    <a href = "faqs.html">HOW TO</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
+
+<script>
+    function myFunction() {
+        // Get the value of the input field with id="numb"
+        let x = document.getElementById("fname").value;
+        let y = document.getElementById("vehicle1").value;
+        // If x is Not a Number or less than one or greater than 10
+        let text;
+        let textCheckbox;
+        if (x === 'ean') {
+            text = "Input not valid";
+        } else {
+            text = "Input OK";
+        }
+
+        if (y) {
+            textCheckbox = 'Input selected'
+        }
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("demo1").innerHTML = textCheckbox;
+    }
+</script>
