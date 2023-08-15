@@ -10,8 +10,11 @@
 
 
 header {
-    background-color: #651F1D;
-    padding: 15px 25px;
+    background-color: #F7EDE3;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 44vh;
 }
 
 .header-top a{
@@ -22,11 +25,11 @@ header {
 }
 
 .header-logo {
-    width: 50px;
+    width: 150px;
 }
 
 .header-brandname {
-    color: #FFFFFF;
+    color: #DE9840;
     font-size: 60px;
 }
 
@@ -39,7 +42,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 300px 20px 300px;
+    padding: 25px 280px 0px 280px;
 }
 
 .header-bottom ul li {
@@ -52,16 +55,15 @@ header {
 }
 
 .header-bottom ul li a {
-    color: #FFFFFF;
+    color: #DE9840;
     text-decoration: none;
 }
 
 .header-bottom ul li a:hover {
-    color: #b48944;
+    color: #941E17;
 }
 
 .dropdown-parent {
-    color: white;
     font-size: 30px;
     border: none;
 }
@@ -69,10 +71,9 @@ header {
 .dropdown-child {
     display: none;
     position: absolute;
-    background-color: #B48944;
-    max-width: 200px;
+    background-color: #F7EDE3;
+    max-width: 180px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -84,16 +85,29 @@ header {
 }
 
 .dropdown-child a:hover {
-    background-color: #FFFFFF;
+    background-color: #DE9840;
+}
+
+
+
+
+.audio-btn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+}
+
+button img {
+    width: 30px;
 }
 
 
 
 
 
-
 footer{
-    background-color: #651F1D;
+    background-color: #F7EDE3;
     padding: 45px;
     display: flex;
     flex-direction: column;
@@ -101,7 +115,7 @@ footer{
 }
 
 .footer-top{
-    color: #FFF6E7;
+    color: #DE9840;
     font-size: 16px;
 }
 
@@ -126,7 +140,7 @@ footer{
 }
 
 .footer-bottom a{
-    color: #FFF6E7;
+    color: #DE9840;
     font-size: 16px;
     text-decoration: none;
 }
@@ -135,29 +149,28 @@ footer{
 
 
 .home-section1, .gallery-section1, .materials-section1 {
-    background-color: #B48944;
-    height: 45vh;
+    background-color: #DE9840;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 56vh;
 }
 
 .home-section1-heading, .gallery-section1-heading, .materials-section1-heading, .about-section1-heading {
-    color: #FFFFFF;
+    color: #F7EDE3;
     font-size: 50px;
 }
 
 .home-section1-subheading {
     font-size: 20px;
-    color: #FFFFFF;
+    color: #F7EDE3;
 }
 
 
-
 .home-section2{
-    background-color: #EDE1C8;
+    background-color: #DE9840;
     padding: 45px;
     display: flex;
     justify-content: center;
@@ -175,15 +188,15 @@ footer{
 
 .home-section2-right-top {
     padding: 28px 45px;
-    color: #B48944;
+    color: #F7EDE3;
 }
 
 .home-section2-right-top-heading {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .home-section2-right-top-subheading{
-    font-size: 22px;
+    font-size: 32px;
 }
 
 .home-section2-right-bottom {
@@ -191,8 +204,8 @@ footer{
 }
 
 .home-section2-right-bottom a {
-    background-color: #B48944;
-    color: #FFFFFF;
+    background-color: #F7EDE3;
+    color: #DE9840;
     padding: 15px 20px;
     border-radius: 40px;
     font-size: 25px;
@@ -200,42 +213,48 @@ footer{
 }
 
 .home-section2-right-bottom a:hover {
-    background-color: #FFFFFF;
-    color: #B48944;
+    background-color: #F7EDE3;
+    color: #941E17;
 }
-
 
 
 .home-section3 {
-    background-color: #453522;
+    background-color: #DE9840;
     padding: 45px;
-    color: #EDE1C8;
+    color: #F7EDE3;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-.home-section3-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.home-section3-right{
+    padding-right: 60px;
 }
 
-.home-section3-top img {
+.home-section3-right-images {
     width: 450px;
-    padding: 10px 0;
 }
 
-.home-section3-bottom-heading {
-    font-size: 40px;
-    padding: 10px 0;
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+  
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
 }
 
-.home-section3-bottom-subheading {
-    font-size: 22px;
-    text-align: center;
-    max-width: 600px;
-    padding: 10px 0;
+.home-section3-left{
+    padding-left: 65px;
+}
+
+.home-section3-left-heading {
+    font-size: 50px;
+}
+
+.home-section3-left-subheading {
+    font-size: 32px;
 }
 
 

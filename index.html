@@ -4,6 +4,7 @@
     <head>
         <meta charset = "UTF-8">
         <title>Maysaysay</title>
+        <link rel="icon" type="image/x-icon" href="images/general/logo.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Galdeano&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
         <header>
             <div class = "header-top">
                 <a href = "index.html">
-                    <img class = "header-logo" src = "images/general/logo-placeholder.svg">
+                    <img class = "header-logo" src = "images/general/logo.png">
                     <div class = "header-brandname">MAYSAYSAY</div>
                 </a>
             </div>
@@ -28,7 +29,7 @@
                 <ul>
                     <li><div class = "dropdown-parent"><a href = "index.html">HOME</a></div>
                         <div class = "dropdown-child">
-                            <a href = "#">QUIZ</a>
+                            <a href = "quiz.html">QUIZ</a>
                         </div>
                     </li>
 
@@ -57,13 +58,14 @@
                     <li><div class = "dropdown-parent"><a href = "about.html">ABOUT</a></div>
                     </li>
                 </ul>
+                <audio id = "sfxTap" src = "audio/sfx_tap.mp3" preload = "auto"></audio>
             </div>
         </header>
 
         <main>
             <div class = "home-section1">
                 <div class = "home-section1-heading">MAYSAYSAY: Making sense of history.</div>
-                <div class = "home-section1-subheading">History is a puzzle. You may not have all the pieces, but you can work with the pieces you've got. Maysaysay is here to paint you a picture with those pieces.</div>
+                <div class = "home-section1-subheading">History is a puzzle. You may not have all the pieces, but you can work with the pieces you"ve got. Maysaysay is here to paint you a picture with those pieces.</div>
             </div>
             <div class = "home-section2">
                 <div class = "home-section2-left">
@@ -84,20 +86,39 @@
                 </div>
             </div>
             <div class = "home-section3">
-                <div class = "home-section3-content">
-                    <div class = "home-section3-top">
-                        <img class = "home-section3-top-image" src = "images/general/illustrations-placeholder.svg">
-                    </div>
-                    <div class = "home-section3-bottom-heading">
+                <div class = "home-section3-left">
+                    <div class = "home-section3-left-heading">
                         They were once the present.
                     </div>
-                    <div class = "home-section3-bottom-subheading">
-                        But the stories they left are still alive. <br> Click on a character to know what makes them memorable.
+                    <div class = "home-section3-left-subheading">
+                        But the stories they left are still alive. <br> Who are they, you ask? Click on a character to find out!
+                    </div>
+                </div>
+                <div class = "home-section3-right">
+                    <div class = "slideshow_auto">
+                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/FTB.gif"></a>
+                    </div>
+                    <div class = "slideshow_auto">
+                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/NAL.gif"></a>
+                    </div>
+                    <div class = "slideshow_auto">
+                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/RGP.gif"></a>
+                    </div>
+                    <div class = "slideshow_auto">
+                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/MEL.gif"></a>
+                    </div>
+                    <div class = "slideshow_auto">
+                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/LRH.gif"></a>
                     </div>
                 </div>
             </div>
 
         </main>
+
+        <button class = "audio-btn" id = "bgm_theme" onClick = "playPause()">
+            <audio src = "audio/bgm_theme.wav" autoplay loop></audio>
+            <img src = "images/general/bgm.png">
+        </button>
 
         <footer>
             <div class = "footer-top">
@@ -122,10 +143,62 @@
             </ul>
             <div class = "footer-bottom">
                 <a href = "contact.html">CONTACT US</a>
-                <a href = "faqs.html">HOW TO</a>
+                <a href = "guide.html">WEBSITE GUIDE</a>
             </div>
         </footer>
 
     </body>
 
 </html>
+
+<script>
+
+    var aud = document.getElementById("bgm_theme").children[0];
+    var isPlaying = false;
+    aud.pause();
+
+    function playPause() {
+    if (isPlaying) {
+      aud.pause();
+    } else {
+      aud.play();
+    }
+    isPlaying = !isPlaying;
+  }
+
+    var homeBtn = document.getElementById("homeBtn");
+    var sfxTap = document.getElementById("sfxTap");
+	var audios = document.querySelectorAll("audio");
+    console.log(audios);
+
+
+    homeBtn.addEventListener("mouseover", function() {
+    [].forEach.call(audios, function(audio) {
+    audio.play();
+    });
+    }, false);
+
+    homeBtn.addEventListener("mouseleave", function() {
+        sfxTap.pause();
+        sfxTap.currentTime = 0;
+    }, false);
+
+</script>
+
+<script>
+    let index = 0;
+    displayImages();
+    function displayImages() {
+  let i;
+  const images = document.getElementsByClassName("slideshow_auto");
+  for (i = 0; i < images.length; i++) {
+    images[i].style.display = "none";
+  }
+  index++;
+  if (index > images.length) {
+    index = 1;
+  }
+  images[index-1].style.display = "block";
+  setTimeout(displayImages, 2500); 
+}
+</script>
