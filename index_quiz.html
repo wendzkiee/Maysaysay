@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
     </style>
   </head>
   <body>
@@ -80,7 +80,8 @@
       <div class="answer-choice">
         <button id="q4a1"><p>An initiator and leader</p></button>
       </div>
-      <div class="answer-choice"><button><p>Friendly and loves talking with people</p></button>
+      <div class="answer-choice">
+        <button><p>Friendly and loves talking with people</p></button>
       </div>
       <div class="answer-choice">
         <button id="q4a3"><p>Assertive and persevering</p></button>
@@ -100,7 +101,8 @@
         <button id="q5a1"><p>Being patient and helpful to others</p></button>
       </div>
       <div class="answer-choice">
-        <button id="q5a2"><p>Managing my school time with personal time</p>
+        <button id="q5a2">
+          <p>Managing my school time with personal time</p>
         </button>
       </div>
       <div class="answer-choice">
@@ -110,7 +112,9 @@
         <button id="q5a4"><p>Being brave and a risk-taker</p></button>
       </div>
       <div class="answer-choice">
-        <button id="q5a5"><p>Being honest and doing what I believe is right</p></button>
+        <button id="q5a5">
+          <p>Being honest and doing what I believe is right</p>
+        </button>
       </div>
     </div>
 
@@ -118,16 +122,27 @@
     <h2>If I were given a grand award, I would want it to be mainly for…</h2>
     <div class="question">
       <div class="answer-choice">
-        <button id="q6a1"><p>Helping provide education for those who cannot go to school</p></button>
+        <button id="q6a1">
+          <p>Helping provide education for those who cannot go to school</p>
+        </button>
       </div>
       <div class="answer-choice">
-        <button id="q6a2"><p>Protecting Filipinos from injustices through the law</p></button>
+        <button id="q6a2">
+          <p>Protecting Filipinos from injustices through the law</p>
+        </button>
       </div>
       <div class="answer-choice">
-        <button id="q6a3"><p>Leading warriors into battle to fight for my country</p></button>
+        <button id="q6a3">
+          <p>Leading warriors into battle to fight for my country</p>
+        </button>
       </div>
       <div class="answer-choice">
-        <button id="q6a4"><p>Travelling between places to deliver supplies that kept communities alive</p></button>
+        <button id="q6a4">
+          <p>
+            Travelling between places to deliver supplies that kept communities
+            alive
+          </p>
+        </button>
       </div>
       <div class="answer-choice">
         <button id="q6a5"><p>Achieving academic excellence</p></button>
@@ -136,9 +151,93 @@
 
     <div class="result">
       <h2 id="result">Your result is...</h2>
+      <p id="resultPersonality" style="font-size: large"></p>
     </div>
     <div class="restart-button">
-      <button id="restart">Restart</button>
+      <button id="restart" onclick="submitForm()">Know my Personality</button>
+      <button id="restart" onclick="resetForm()">Restart</button>
     </div>
   </body>
 </html>
+
+<script>
+  function submitForm() {
+    let q1a1 = document.getElementById('q1a1').value;
+    let q1a2 = document.getElementById('q1a2').value;
+    let q1a3 = document.getElementById('q1a3').value;
+    let q1a4 = document.getElementById('q1a4').value;
+    let q1a5 = document.getElementById('q1a5').value;
+
+    let q2a1 = document.getElementById('q2a1').value;
+    let q2a2 = document.getElementById('q2a2').value;
+    let q2a3 = document.getElementById('q2a3').value;
+    let q2a4 = document.getElementById('q2a4').value;
+    let q2a5 = document.getElementById('q2a5').value;
+
+    let q3a1 = document.getElementById('q3a1').value;
+    let q3a2 = document.getElementById('q3a2').value;
+    let q3a3 = document.getElementById('q3a3').value;
+    let q3a4 = document.getElementById('q3a4').value;
+    let q3a5 = document.getElementById('q3a5').value;
+
+    let q4a1 = document.getElementById('q4a1').value;
+    let q4a2 = document.getElementById('q4a2').value;
+    let q4a3 = document.getElementById('q4a3').value;
+    let q4a4 = document.getElementById('q4a4').value;
+    let q4a5 = document.getElementById('q4a5').value;
+
+    let q5a1 = document.getElementById('q5a1').value;
+    let q5a2 = document.getElementById('q5a2').value;
+    let q5a3 = document.getElementById('q5a3').value;
+    let q5a4 = document.getElementById('q5a4').value;
+    let q5a5 = document.getElementById('q5a5').value;
+
+    let q6a1 = document.getElementById('q6a1').value;
+    let q6a2 = document.getElementById('q6a2').value;
+    let q6a3 = document.getElementById('q6a3').value;
+    let q6a4 = document.getElementById('q6a4').value;
+    let q6a5 = document.getElementById('q6a5').value;
+
+    let a1Truths = [q1a1, q2a1, q3a1, q4a1, q5a1, q6a1].filter(
+      (element) => element
+    ).length;
+    let a2Truths = [q1a2, q2a2, q3a2, q4a2, q5a2, q6a2].filter(
+      (element) => element
+    ).length;
+    let a3Truths = [q1a3, q2a3, q3a3, q4a3, q5a3, q6a3].filter(
+      (element) => element
+    ).length;
+    let a4Truths = [q1a4, q2a4, q3a4, q4a4, q5a4, q6a4].filter(
+      (element) => element
+    ).length;
+    let a5Truths = [q1a5, q2a5, q3a5, q4a5, q5a5, q6a5].filter(
+      (element) => element
+    ).length;
+    let a6Truths = [q1a6, q2a6, q3a6, q4a6, q5a6, q6a6].filter(
+      (element) => element
+    ).length;
+
+    if (a1Truths / 6 > 0.6) {
+      document.getElementById('resultPersonality').innerHTML =
+        'Your personality is from A1';
+    } else if (a2Truths / 6 > 0.6) {
+      document.getElementById('resultPersonality').innerHTML =
+        'Your personality is from A2';
+    } else if (a3Truths / 6 > 0.6) {
+      document.getElementById('resultPersonality').innerHTML =
+        'Your personality is from A3';
+    } else if (a4Truths / 6 > 60) {
+      document.getElementById('resultPersonality').innerHTML =
+        'Your personality is from A4';
+    } else if (a5Truths / 6 > 60) {
+      document.getElementById('resultPersonality').innerHTML =
+        'Your personality is from A5';
+    } else if (a6Truths / 6 > 60) {
+      document.getElementById('resultPersonality').innerHTML =
+        'Your personality is from A6';
+    } else {
+      document.getElementById('resultPersonality').innerHTML =
+        'Your personality is default personality.';
+    }
+  }
+</script>

@@ -1,163 +1,207 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Maysaysay</title>
+    <link rel="icon" type="image/x-icon" href="images/general/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Galdeano&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
 
-    <head>
-        <meta charset = "UTF-8">
-        <title>Maysaysay</title>
-        <link rel="icon" type="image/x-icon" href="images/general/logo.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Galdeano&display=swap" rel="stylesheet">
-        <link rel = "stylesheet" href = "css/style.css" type = "text/css" />
-    </head>
+  <meta name="viewport" content="width=device-width" />
 
-    <meta name = "viewport" content = "width=device-width">
-
-    <body>
-        
-        <header>
-            <div class = "header-top">
-                <a href = "index.html">
-                    <img class = "header-logo" src = "images/general/logo.png">
-                    <div class = "header-brandname">MAYSAYSAY</div>
-                </a>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="index.html">
+          <img class="header-logo" src="images/general/logo.png" />
+          <div class="header-brandname">MAYSAYSAY</div>
+        </a>
+      </div>
+      <div class="header-middle"></div>
+      <div class="header-bottom">
+        <ul>
+          <li>
+            <div class="dropdown-parent"><a href="index.html">HOME</a></div>
+            <div class="dropdown-child">
+              <a href="quiz.html">QUIZ</a>
             </div>
-            <div class = "header-middle">
+          </li>
 
+          <li>
+            <div class="dropdown-parent">
+              <a href="gallery.html">GALLERY</a>
             </div>
-            <div class = "header-bottom">
-                <ul>
-                    <li><div class = "dropdown-parent"><a href = "index.html">HOME</a></div>
-                        <div class = "dropdown-child">
-                            <a href = "quiz.html">QUIZ</a>
-                        </div>
-                    </li>
-
-                    <li><div class = "dropdown-parent"><a href = "gallery.html">GALLERY</a></div>
-                        <div class = "dropdown-child">
-                            <a href = "#">FEATURES</a>
-                            <a href = "#">MAKE YOUR OWN PROFILE</a>
-                            <a href = "#">STUDENT PROFILES</a>
-                        </div>
-                    </li>
-
-                    <li><div class = "dropdown-parent"><a href = "materials.html">MATERIALS</a></div>
-                        <div class = "dropdown-child">
-                            <a href = "#">WORKSHEETS</a>
-                            <a href = "#">GIF STICKERS</a>
-                            <a href = "#">SLIDESHOW TEMPLATES</a>
-                        </div>
-                    </li>
-
-                    <li><div class = "dropdown-parent"><a href = "submit.html">SUBMIT A FEATURE</a></div>
-                        <div class = "dropdown-child">
-                            <a href = "#">SUBMISSION FORM</a>
-                        </div>
-                    </li>
-
-                    <li><div class = "dropdown-parent"><a href = "about.html">ABOUT</a></div>
-                    </li>
-                </ul>
-                <audio id = "sfxTap" src = "audio/sfx_tap.mp3" preload = "auto"></audio>
+            <div class="dropdown-child">
+              <a href="#">FEATURES</a>
+              <a href="#">MAKE YOUR OWN PROFILE</a>
+              <a href="#">STUDENT PROFILES</a>
             </div>
-        </header>
+          </li>
 
-        <main>
-            <div class = "home-section1">
-                <div class = "home-section1-heading">MAYSAYSAY: Making sense of history.</div>
-                <div class = "home-section1-subheading">History is a puzzle. You may not have all the pieces, but you can work with the pieces you"ve got. Maysaysay is here to paint you a picture with those pieces.</div>
+          <li>
+            <div class="dropdown-parent">
+              <a href="materials.html">MATERIALS</a>
             </div>
-            <div class = "home-section2">
-                <div class = "home-section2-left">
-                    <img class = "home-section2-left-image" src = "images/general/illustrations-placeholder.svg">
-                </div>
-                <div class = "home-section2-right">
-                    <div class = "home-section2-right-top">
-                        <div class = "home-section2-right-top-heading">
-                            You are part of the past.
-                        </div>
-                        <div class = "home-section2-right-top-subheading">
-                            Take this quiz to see how similar you can be to someone from your own history.
-                        </div>
-                    </div>
-                    <div class = "home-section2-right-bottom">
-                        <a href = "quiz.html">TAKE THE QUIZ</a>
-                    </div>
-                </div>
+            <div class="dropdown-child">
+              <a href="#">WORKSHEETS</a>
+              <a href="#">GIF STICKERS</a>
+              <a href="#">SLIDESHOW TEMPLATES</a>
             </div>
-            <div class = "home-section3">
-                <div class = "home-section3-left">
-                    <div class = "home-section3-left-heading">
-                        They were once the present.
-                    </div>
-                    <div class = "home-section3-left-subheading">
-                        But the stories they left are still alive. <br> Who are they, you ask? Click on a character to find out!
-                    </div>
-                </div>
-                <div class = "home-section3-right">
-                    <div class = "slideshow_auto">
-                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/FTB.gif"></a>
-                    </div>
-                    <div class = "slideshow_auto">
-                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/NAL.gif"></a>
-                    </div>
-                    <div class = "slideshow_auto">
-                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/RGP.gif"></a>
-                    </div>
-                    <div class = "slideshow_auto">
-                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/MEL.gif"></a>
-                    </div>
-                    <div class = "slideshow_auto">
-                        <a href = "gallery.html"><img class = "home-section3-right-images" src = "images/gifs/LRH.gif"></a>
-                    </div>
-                </div>
+          </li>
+
+          <li>
+            <div class="dropdown-parent">
+              <a href="submit.html">SUBMIT A FEATURE</a>
             </div>
-
-        </main>
-
-        <button class = "audio-btn" id = "bgm_theme" onClick = "playPause()">
-            <audio src = "audio/bgm_theme.wav" autoplay loop></audio>
-            <img src = "images/general/bgm.png">
-        </button>
-
-        <footer>
-            <div class = "footer-top">
-                © 2023 Maysaysay. All rights reserved.
+            <div class="dropdown-child">
+              <a href="#">SUBMISSION FORM</a>
             </div>
-            <ul class = "footer-middle">
-                <li>
-                    <a href = "https://www.facebook.com/maysaysayproject">
-                        <img class = "socmed-icons" src = "images/general/facebook-placeholder.png">
-                    </a>
-                </li>
-                <li>
-                    <a href = "https://www.instagram.com/maysaysayproject">
-                        <img class = "socmed-icons" src = "images/general/instagram-placeholder.png">
-                    </a>
-                </li>
-                <li>
-                    <a href = "https://www.tiktok.com/#">
-                        <img class = "socmed-icons" src = "images/general/tiktok-placeholder.png">
-                    </a>
-                </li>
-            </ul>
-            <div class = "footer-bottom">
-                <a href = "contact.html">CONTACT US</a>
-                <a href = "guide.html">WEBSITE GUIDE</a>
+          </li>
+
+          <li>
+            <div class="dropdown-parent"><a href="about.html">ABOUT</a></div>
+          </li>
+        </ul>
+        <audio id="sfxTap" src="audio/sfx_tap.mp3" preload="auto"></audio>
+      </div>
+    </header>
+
+    <main>
+      <div class="home-section1">
+        <div class="home-section1-heading">
+          MAYSAYSAY: Making sense of history.
+        </div>
+        <div class="home-section1-subheading">
+          History is a puzzle. You may not have all the pieces, but you can work
+          with the pieces you"ve got. Maysaysay is here to paint you a picture
+          with those pieces.
+        </div>
+      </div>
+      <div class="home-section2">
+        <div class="home-section2-left">
+          <img
+            class="home-section2-left-image"
+            src="images/general/illustrations-placeholder.svg"
+          />
+        </div>
+        <div class="home-section2-right">
+          <div class="home-section2-right-top">
+            <div class="home-section2-right-top-heading">
+              You are part of the past.
             </div>
-        </footer>
+            <div class="home-section2-right-top-subheading">
+              Take this quiz to see how similar you can be to someone from your
+              own history.
+            </div>
+          </div>
+          <div class="home-section2-right-bottom">
+            <a href="quiz.html">TAKE THE QUIZ</a>
+          </div>
+        </div>
+      </div>
+      <div class="home-section3">
+        <div class="home-section3-left">
+          <div class="home-section3-left-heading">
+            They were once the present.
+          </div>
+          <div class="home-section3-left-subheading">
+            But the stories they left are still alive. <br />
+            Who are they, you ask? Click on a character to find out!
+          </div>
+        </div>
+        <div class="home-section3-right">
+          <div class="slideshow_auto">
+            <a href="gallery.html"
+              ><img
+                class="home-section3-right-images"
+                src="images/gifs/FTB.gif"
+            /></a>
+          </div>
+          <div class="slideshow_auto">
+            <a href="gallery.html"
+              ><img
+                class="home-section3-right-images"
+                src="images/gifs/NAL.gif"
+            /></a>
+          </div>
+          <div class="slideshow_auto">
+            <a href="gallery.html"
+              ><img
+                class="home-section3-right-images"
+                src="images/gifs/RGP.gif"
+            /></a>
+          </div>
+          <div class="slideshow_auto">
+            <a href="gallery.html"
+              ><img
+                class="home-section3-right-images"
+                src="images/gifs/MEL.gif"
+            /></a>
+          </div>
+          <div class="slideshow_auto">
+            <a href="gallery.html"
+              ><img
+                class="home-section3-right-images"
+                src="images/gifs/LRH.gif"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    </body>
+    <button class="audio-btn" id="bgm_theme" onClick="playPause()">
+      <audio src="audio/bgm_theme.wav" autoplay loop></audio>
+      <img src="images/general/bgm.png" />
+    </button>
 
+    <footer>
+      <div class="footer-top">© 2023 Maysaysay. All rights reserved.</div>
+      <ul class="footer-middle">
+        <li>
+          <a href="https://www.facebook.com/maysaysayproject">
+            <img
+              class="socmed-icons"
+              src="images/general/facebook-placeholder.png"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/maysaysayproject">
+            <img
+              class="socmed-icons"
+              src="images/general/instagram-placeholder.png"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/#">
+            <img
+              class="socmed-icons"
+              src="images/general/tiktok-placeholder.png"
+            />
+          </a>
+        </li>
+      </ul>
+      <div class="footer-bottom">
+        <a href="contact.html">CONTACT US</a>
+        <a href="guide.html">WEBSITE GUIDE</a>
+      </div>
+    </footer>
+  </body>
 </html>
 
 <script>
+  var aud = document.getElementById('bgm_theme').children[0];
+  var isPlaying = false;
+  aud.pause();
 
-    var aud = document.getElementById("bgm_theme").children[0];
-    var isPlaying = false;
-    aud.pause();
-
-    function playPause() {
+  function playPause() {
     if (isPlaying) {
       aud.pause();
     } else {
@@ -166,39 +210,45 @@
     isPlaying = !isPlaying;
   }
 
-    var homeBtn = document.getElementById("homeBtn");
-    var sfxTap = document.getElementById("sfxTap");
-	var audios = document.querySelectorAll("audio");
-    console.log(audios);
+  var homeBtn = document.getElementById('homeBtn');
+  var sfxTap = document.getElementById('sfxTap');
+  var audios = document.querySelectorAll('audio');
+  console.log(audios);
 
+  homeBtn.addEventListener(
+    'mouseover',
+    function () {
+      [].forEach.call(audios, function (audio) {
+        audio.play();
+      });
+    },
+    false
+  );
 
-    homeBtn.addEventListener("mouseover", function() {
-    [].forEach.call(audios, function(audio) {
-    audio.play();
-    });
-    }, false);
-
-    homeBtn.addEventListener("mouseleave", function() {
-        sfxTap.pause();
-        sfxTap.currentTime = 0;
-    }, false);
-
+  homeBtn.addEventListener(
+    'mouseleave',
+    function () {
+      sfxTap.pause();
+      sfxTap.currentTime = 0;
+    },
+    false
+  );
 </script>
 
 <script>
-    let index = 0;
-    displayImages();
-    function displayImages() {
-  let i;
-  const images = document.getElementsByClassName("slideshow_auto");
-  for (i = 0; i < images.length; i++) {
-    images[i].style.display = "none";
+  let index = 0;
+  displayImages();
+  function displayImages() {
+    let i;
+    const images = document.getElementsByClassName('slideshow_auto');
+    for (i = 0; i < images.length; i++) {
+      images[i].style.display = 'none';
+    }
+    index++;
+    if (index > images.length) {
+      index = 1;
+    }
+    images[index - 1].style.display = 'block';
+    setTimeout(displayImages, 2500);
   }
-  index++;
-  if (index > images.length) {
-    index = 1;
-  }
-  images[index-1].style.display = "block";
-  setTimeout(displayImages, 2500); 
-}
 </script>
