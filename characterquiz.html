@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Maysaysay</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/general/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Galdeano&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+
+  <meta name="viewport" content="width=device-width" />
+
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="index.html">
+          <img class="header-logo" src="images/general/logo.png" />
+          <div class="header-brandname">MAYSAYSAY</div>
+        </a>
+      </div>
+      <div class="header-middle"></div>
+      <div class="header-bottom">
+        <ul>
+          <li>
+            <div class="dropdown-parent"><a href="index.html">HOME</a></div>
+            <div class="dropdown-child">
+              <a href="quiz.html">QUIZ</a>
+            </div>
+          </li>
+
+          <li>
+            <div class="dropdown-parent">
+              <a href="gallery.html">GALLERY</a>
+            </div>
+            <div class="dropdown-child">
+              <a href="gallery.html">FEATURES</a>
+              <a href="materials/profileworksheet.zip">MAKE YOUR OWN PROFILE</a>
+              <a href="studentprofiles.html">FEATURED STUDENT PROFILES</a>
+            </div>
+          </li>
+
+          <li>
+            <div class="dropdown-parent">
+              <a href="materials.html">MATERIALS</a>
+            </div>
+            <div class="dropdown-child">
+              <a href="materials/guideqsworksheets.zip">WORKSHEETS</a>
+              <a href="materials/gifs.zip">GIF STICKERS</a>
+              <a href="materials/slideshowtemplates.zip">SLIDESHOW TEMPLATES</a>
+            </div>
+          </li>
+
+          <li>
+            <div class="dropdown-parent"><a href="submit.html">SUBMIT</a></div>
+            <div class="dropdown-child">
+              <a href="https://forms.gle/Y7bGuJpB8FnxJ7Xg8" target="_blank"
+                >SUGGEST A FEATURE</a
+              >
+              <a href="https://forms.gle/vbkKb3YMdkK8RF4o7" target="_blank"
+                >SUBMIT YOUR PROFILE</a
+              >
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-parent"><a href="about.html">ABOUT</a></div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="wholepage">
+      <div class="quiz-section1">
+        <div class="quiz-section1-container">
+          <div class="quiz-heading">Francisca Tirona-Benitez</div>
+          <div id="quiz"></div>
+          <div id="result" class="result"></div>
+          <button id="submit" class="button">NEXT</button>
+          <button id="retry" class="button hide">Retry</button>
+          <button id="showAnswer" class="button hide">Show Answers</button>
+          <button id="getCard" class="button hide">CARD</button>
+          <button id="downloadPdfButton">PRINT TO PDF</button>
+        </div>
+      </div>
+
+      <button class="audio-btn-bgm" id="bgm_theme" onClick="playPause()">
+        <audio src="audio/bgm_theme.wav" autoplay loop></audio>
+        <img src="images/general/musicnote_on.png" />
+      </button>
+    </div>
+
+    <footer>
+      <div class="footer-top">© 2023 Maysaysay. All rights reserved.</div>
+      <ul class="footer-middle">
+        <li>
+          <a href="https://www.facebook.com/maysaysayproject" target="_blank">
+            <img class="socmed-icons" src="images/general/facebook.png" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/maysaysayproject" target="_blank">
+            <img class="socmed-icons" src="images/general/instagram.png" />
+          </a>
+        </li>
+      </ul>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <a href="contact.html"> CONTACT US </a>
+        </div>
+        <div class="footer-bottom-right">
+          <a href="guide.html">WEBSITE GUIDE</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  var aud = document.getElementById('bgm_theme').children[0];
+  var isPlaying = false;
+  aud.pause();
+
+  function playPause() {
+    if (isPlaying) {
+      aud.pause();
+    } else {
+      aud.play();
+    }
+    isPlaying = !isPlaying;
+  }
+
+  const quizData = [
+    {
+      question: "What is Francisca's nickname?",
+      options: [
+        'Little Girl of the Nation',
+        'Little Girl of the Revolution',
+        'Apprentice of the Revolution',
+      ],
+      answer: 'Little Girl of the Revolution',
+    },
+    {
+      question: 'Which Philippine province is Francisca from?',
+      options: ['Cavite', 'Cagayan', 'Cebu'],
+      answer: 'Cavite',
+    },
+    {
+      question: "What was the job of both of Francisca's parents?",
+      options: ['Artists', 'Doctors', 'Teachers'],
+      answer: 'Teachers',
+    },
+    {
+      question:
+        'In 1919, Francisca founded this school, the first university in Asia that was exclusive for women.',
+      options: [
+        "Women's University of the Philippines",
+        "National Women's College",
+        "Philippine Women's University",
+      ],
+      answer: "Philippine Women's University",
+    },
+    {
+      question:
+        'Francisca established Asociación de Damas Filipinas, a shelter for...',
+      options: ['The elderly', 'Typhoon victims', 'Orphans and homeless women'],
+      answer: 'Orphans and homeless women',
+    },
+    {
+      question:
+        'Francisca established a Volunteer Social Aid Committee for war prisoners during which occupation?',
+      options: ['Japanese', 'American', 'Spanish'],
+      answer: 'Japanese',
+    },
+    {
+      question: 'Francisca was born in...',
+      options: ['1974', '1886', '1955'],
+      answer: '1886',
+    },
+  ];
+
+  const quizContainer = document.getElementById('quiz');
+  const resultContainer = document.getElementById('result');
+  const submitButton = document.getElementById('submit');
+  const retryButton = document.getElementById('retry');
+  const showAnswerButton = document.getElementById('showAnswer');
+  const downloadPdfButton = document.getElementById('downloadPdfButton');
+
+  let currentQuestion = 0;
+  let score = 0;
+  let incorrectAnswers = [];
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  function displayQuestion() {
+    const questionData = quizData[currentQuestion];
+
+    const questionElement = document.createElement('div');
+    questionElement.className = 'question';
+    questionElement.innerHTML = questionData.question;
+
+    const optionsElement = document.createElement('div');
+    optionsElement.className = 'options';
+
+    const shuffledOptions = [...questionData.options];
+    shuffleArray(shuffledOptions);
+
+    for (let i = 0; i < shuffledOptions.length; i++) {
+      const option = document.createElement('label');
+      option.className = 'option';
+
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'quiz';
+      radio.value = shuffledOptions[i];
+
+      const optionText = document.createTextNode(shuffledOptions[i]);
+
+      option.appendChild(radio);
+      option.appendChild(optionText);
+      optionsElement.appendChild(option);
+    }
+
+    quizContainer.innerHTML = '';
+    quizContainer.appendChild(questionElement);
+    quizContainer.appendChild(optionsElement);
+  }
+
+  function checkAnswer() {
+    const selectedOption = document.querySelector('input[name="quiz"]:checked');
+    if (selectedOption) {
+      const answer = selectedOption.value;
+      if (answer === quizData[currentQuestion].answer) {
+        score++;
+      } else {
+        incorrectAnswers.push({
+          question: quizData[currentQuestion].question,
+          incorrectAnswer: answer,
+          correctAnswer: quizData[currentQuestion].answer,
+        });
+      }
+      currentQuestion++;
+      selectedOption.checked = false;
+      if (currentQuestion < quizData.length) {
+        displayQuestion();
+      } else {
+        displayResult();
+      }
+    }
+  }
+
+  function displayResult() {
+    quizContainer.style.display = 'none';
+    submitButton.style.display = 'none';
+    retryButton.style.display = 'inline-block';
+    showAnswerButton.style.display = 'inline-block';
+    resultContainer.innerHTML = `Good job! You scored ${score} out of ${quizData.length}. Keep trying until you get a perfect score to get a collectible card!`;
+  }
+
+  function retryQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    incorrectAnswers = [];
+    quizContainer.style.display = 'block';
+    submitButton.style.display = 'inline-block';
+    retryButton.style.display = 'none';
+    showAnswerButton.style.display = 'none';
+    resultContainer.innerHTML = '';
+    displayQuestion();
+  }
+
+  function showAnswer() {
+    quizContainer.style.display = 'none';
+    submitButton.style.display = 'none';
+    retryButton.style.display = 'inline-block';
+    showAnswerButton.style.display = 'none';
+
+    let incorrectAnswersHtml = '';
+    for (let i = 0; i < incorrectAnswers.length; i++) {
+      incorrectAnswersHtml += `
+      <p>
+        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+        <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+      </p>
+    `;
+    }
+
+    resultContainer.innerHTML = `
+    <p>You scored ${score} out of ${quizData.length}!</p>
+    <p>Incorrect Answers:</p>
+    ${incorrectAnswersHtml}
+  `;
+  }
+
+  function downloadToPdf() {
+    let element = document.getElementById('wholepage');
+    html2pdf(element).save('filename.pdf');
+  }
+
+  submitButton.addEventListener('click', checkAnswer);
+  retryButton.addEventListener('click', retryQuiz);
+  showAnswerButton.addEventListener('click', showAnswer);
+  downloadPdfButton.addEventListener('click', downloadToPdf);
+
+  displayQuestion();
+</script>
