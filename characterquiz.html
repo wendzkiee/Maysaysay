@@ -89,7 +89,7 @@
         </div>
       </div>
 
-      <button class="audio-btn-bgm" id="bgm_theme" onClick="playPause()">
+      <button class="audio-btn-bgm" id="bgm_theme" onclick="playPause()">
         <audio src="audio/bgm_theme.wav" autoplay loop></audio>
         <img src="images/general/musicnote_on.png" />
       </button>
@@ -122,11 +122,10 @@
 </html>
 
 <script>
-  var aud = document.getElementById('bgm_theme').children[0];
-  var isPlaying = false;
-  aud.pause();
-
   function playPause() {
+    let aud = document.getElementById('bgm_theme').children[0];
+    let isPlaying = false;
+    aud.pause();
     if (isPlaying) {
       aud.pause();
     } else {
@@ -190,6 +189,8 @@
   const retryButton = document.getElementById('retry');
   const showAnswerButton = document.getElementById('showAnswer');
   const downloadPdfButton = document.getElementById('downloadPdfButton');
+
+  downloadPdfButton.style.display = 'none';
 
   let currentQuestion = 0;
   let score = 0;
@@ -285,6 +286,10 @@
     retryButton.style.display = 'inline-block';
     showAnswerButton.style.display = 'none';
 
+    if (score === 7) {
+      downloadPdfButton.style.display = 'inline-block';
+    }
+
     let incorrectAnswersHtml = '';
     for (let i = 0; i < incorrectAnswers.length; i++) {
       incorrectAnswersHtml += `
@@ -303,9 +308,9 @@
   `;
   }
 
-  function downloadToPdf() {
+  async function downloadToPdf() {
     let element = document.getElementById('wholepage');
-    html2pdf(element).save('filename.pdf');
+    await html2pdf(element).save('filename.pdf');
   }
 
   submitButton.addEventListener('click', checkAnswer);
