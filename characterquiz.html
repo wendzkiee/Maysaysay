@@ -266,6 +266,10 @@
     retryButton.style.display = 'inline-block';
     showAnswerButton.style.display = 'inline-block';
     resultContainer.innerHTML = `Good job! You scored ${score} out of ${quizData.length}. Keep trying until you get a perfect score to get a collectible card!`;
+
+    if (score === 7) {
+      downloadPdfButton.style.display = 'inline-block';
+    }
   }
 
   function retryQuiz() {
@@ -285,10 +289,6 @@
     submitButton.style.display = 'none';
     retryButton.style.display = 'inline-block';
     showAnswerButton.style.display = 'none';
-
-    if (score === 7) {
-      downloadPdfButton.style.display = 'inline-block';
-    }
 
     let incorrectAnswersHtml = '';
     for (let i = 0; i < incorrectAnswers.length; i++) {
